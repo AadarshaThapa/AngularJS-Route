@@ -1,0 +1,40 @@
+<script src="app.js"></script>
+<div id="menu-bar">
+    <h2>My Directory</h2>
+
+    <ul id ="data-list">
+        <li><a href="#/home">Home</a> </li>
+        <li><a href="#/directory">List</a> </li>
+    </ul>
+</div>
+<h2>HOMEPAGE</h2>
+
+<random-allig datas="datas">
+    {{datas}}
+</random-allig>
+
+
+<!-- <div class="content">
+    <div ng-controller="MyController">
+        <button ng-click="order = 'name' ">Sort By Name </button>
+        <button ng-click="order = 'belt' ">Sort By Belt </button>
+        <input type="text" ng-model="search" placeholder="Search a name">
+        <ul>
+            <li ng-repeat="data in datas | orderBy: order | filter:search" ng-show="data.available">
+                {{data.name }} - {{data.rate | currency:'$'}}
+                <div class="remove" ng-click="deleteData(data)">X</div>
+                <span class="belt" style="background: {{data.belt}}">
+                    {{data.belt}} Belt
+                </span>
+            </li>
+        </ul>
+
+        <form>
+            <input type="text" placeholder="name" ng-model="newdata.name" />
+            <input type="text" placeholder="belt" ng-model="newdata.belt" />
+            <input type="text" placeholder="rate" ng-model="newdata.rate" />
+            <button ng-click="addData()">Add New Data</button>
+        </form>
+
+    </div>
+</div> -->

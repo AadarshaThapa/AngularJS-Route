@@ -1,0 +1,27 @@
+<h1>Directory</h1>
+<div class="content">
+    <div ng-controller="MyController">
+        <button ng-click="order = 'name' ">Sort By Name </button>
+        <button ng-click="order = 'belt' ">Sort By Belt </button>
+        <input type="text" ng-model="search" placeholder="Search a name">
+        <ul>
+            <li ng-repeat="data in datas | orderBy: order | filter:search" ng-show="data.available">
+                {{data.name }} - {{data.rate | currency:'$'}}
+                <div class="remove" ng-click="deleteData(data)">X</div>
+                <span class="belt" style="background: {{data.belt}}">
+                    {{data.belt}} Belt
+                </span>
+            </li>
+        </ul>
+
+        <form name="Contactform">
+            <input type="text" placeholder="name" ng-model="newdata.name" />
+            <input type="text" placeholder="belt" ng-model="newdata.belt" />
+            <input type="text" placeholder="rate" ng-model="newdata.rate" />
+            <button ng-click="addData()">Add New Data</button>
+            <button ng-click="removeAllData()">Remove All Data</button>
+            <input type="submit" value="Send" ng-disabled="Contactform.$invalid" />
+        </form>
+
+    </div>
+</div>
